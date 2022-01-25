@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:icon="@drawable/ic_train"
+        android:id="@+id/homeFragment"
+        android:title="Trains"
+        android:menuCategory="secondary"/>
+
+    <item
+        android:icon="@drawable/ic_cart"
+        android:id="@+id/cartFragment"
+        android:title="Cart"
+        android:menuCategory="secondary"
+        />
+    <item
+        android:icon="@drawable/ic_info"
+        android:id="@+id/aboutFragment"
+        android:title="About"
+        android:menuCategory="secondary"
+        />
+</menu>
