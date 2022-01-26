@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fragments.SingUpFragment">
+    tools:context=".Fragments.SingUpFragment"
+    android:background="@drawable/image_trains_background">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView

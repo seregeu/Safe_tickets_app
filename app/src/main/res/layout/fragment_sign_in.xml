@@ -15,15 +15,15 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_marginTop="310dp"
-        app:boxCornerRadiusBottomEnd="10dp"
-        app:boxCornerRadiusBottomStart="10dp"
-        app:boxCornerRadiusTopEnd="10dp"
-        app:boxCornerRadiusTopStart="10dp">
+        app:boxCornerRadiusBottomEnd="@dimen/rounded_textview_radius"
+        app:boxCornerRadiusBottomStart="@dimen/rounded_textview_radius"
+        app:boxCornerRadiusTopEnd="@dimen/rounded_textview_radius"
+        app:boxCornerRadiusTopStart="@dimen/rounded_textview_radius">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Login" />
+            android:hint="@string/label_login" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -33,25 +33,28 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/login_text_input_layout"
         android:layout_marginTop="20dp"
-        app:boxCornerRadiusBottomEnd="10dp"
-        app:boxCornerRadiusBottomStart="10dp"
-        app:boxCornerRadiusTopEnd="10dp"
-        app:boxCornerRadiusTopStart="10dp">
+        app:boxCornerRadiusBottomEnd="@dimen/rounded_textview_radius"
+        app:boxCornerRadiusBottomStart="@dimen/rounded_textview_radius"
+        app:boxCornerRadiusTopEnd="@dimen/rounded_textview_radius"
+        app:boxCornerRadiusTopStart="@dimen/rounded_textview_radius">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:password="true"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Password" />
+            android:hint="@string/label_password"
+            tools:ignore="Deprecated" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/sign_in_button"
-        android:layout_width="wrap_content"
+        android:layout_width="129dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/password_text_input_layout"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
-        android:text="Sign in" />
+        android:background="@drawable/custom_sign_in_button"
+        android:text="@string/label_sign_in" />
 
     <TextView
         android:id="@+id/signup_textwiew"
@@ -61,7 +64,8 @@
         app:boxCornerRadiusBottomStart="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Register a new account" />
+        android:textSize="18sp"
+        android:text="@string/label_register_account" />
 
 
 </RelativeLayout>
