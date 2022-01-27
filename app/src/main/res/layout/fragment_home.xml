@@ -1,14 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fragments.HomeFragment">
+    tools:context=".Fragments.HomeFragment"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="2dp">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="2dp"
+        app:cardBackgroundColor="@color/medum_blue"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="30dp">
 
-</FrameLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="4dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/city_from_text_input_layout"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                app:boxBackgroundColor="@color/bright_blue"
+                app:boxCornerRadiusBottomEnd="@dimen/rounded_textview_radius"
+                app:boxCornerRadiusBottomStart="@dimen/rounded_textview_radius"
+                app:boxCornerRadiusTopEnd="@dimen/rounded_textview_radius"
+                app:boxCornerRadiusTopStart="@dimen/rounded_textview_radius">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/enty_ciy_from"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="City 1"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/city_to_text_input_layout"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                app:boxBackgroundColor="@color/bright_blue"
+
+                android:layout_below="@+id/city_from_text_input_layout"
+                app:boxCornerRadiusBottomEnd="@dimen/rounded_textview_radius"
+                app:boxCornerRadiusBottomStart="@dimen/rounded_textview_radius"
+                app:boxCornerRadiusTopEnd="@dimen/rounded_textview_radius"
+                app:boxCornerRadiusTopStart="@dimen/rounded_textview_radius">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/enty_ciy_to"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="City 2"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

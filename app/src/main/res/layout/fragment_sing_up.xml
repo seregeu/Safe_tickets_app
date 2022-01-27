@@ -138,7 +138,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/sign_in_button"
+        android:id="@+id/sign_up_button"
         android:layout_width="129dp"
         android:layout_centerHorizontal="true"
         android:layout_height="wrap_content"

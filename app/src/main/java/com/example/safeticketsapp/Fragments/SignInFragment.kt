@@ -29,6 +29,8 @@ class SignInFragment : Fragment() {
 
         val signInButton: Button = view.findViewById(R.id.sign_in_button)
         signInButton.setOnClickListener{
+            // TODO: Вызвать метод для отправки данных на сервер, пока переход на экран
+            navController.navigate(R.id.action_signInFragment_to_homeFragment)
         }
         val signupLabel: TextView = view.findViewById(R.id.signup_textwiew)
         signupLabel.setOnClickListener{

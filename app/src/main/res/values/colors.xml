@@ -8,5 +8,6 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="medum_blue">#3057e3</color>
+    <color name="bright_blue">#95AAF8</color>
 
 </resources>
