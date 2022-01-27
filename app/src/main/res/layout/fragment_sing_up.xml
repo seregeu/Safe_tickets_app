@@ -1,15 +1,151 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fragments.SingUpFragment"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.SignInFragment"
     android:background="@drawable/image_trains_background">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
 
-</FrameLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/username_text_input_layout"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        app:boxCornerRadiusBottomEnd="@dimen/rounded_textview_radius"
+        app:boxCornerRadiusBottomStart="@dimen/rounded_textview_radius"
+        app:boxCornerRadiusTopEnd="@dimen/rounded_textview_radius"
+        app:boxCornerRadiusTopStart="@dimen/rounded_textview_radius">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Username" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/email_text_input_layout"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/username_text_input_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        app:boxCornerRadiusBottomEnd="@dimen/rounded_textview_radius"
+        app:boxCornerRadiusBottomStart="@dimen/rounded_textview_radius"
+        app:boxCornerRadiusTopEnd="@dimen/rounded_textview_radius"
+        app:boxCornerRadiusTopStart="@dimen/rounded_textview_radius">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="E-mail" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/name_text_input_layout"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/email_text_input_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        app:boxCornerRadiusBottomEnd="@dimen/rounded_textview_radius"
+        app:boxCornerRadiusBottomStart="@dimen/rounded_textview_radius"
+        app:boxCornerRadiusTopEnd="@dimen/rounded_textview_radius"
+        app:boxCornerRadiusTopStart="@dimen/rounded_textview_radius">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Name" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/lastname_text_input_layout"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/name_text_input_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        app:boxCornerRadiusBottomEnd="@dimen/rounded_textview_radius"
+        app:boxCornerRadiusBottomStart="@dimen/rounded_textview_radius"
+        app:boxCornerRadiusTopEnd="@dimen/rounded_textview_radius"
+        app:boxCornerRadiusTopStart="@dimen/rounded_textview_radius">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Last name" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/phone_text_input_layout"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lastname_text_input_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        app:boxCornerRadiusBottomEnd="@dimen/rounded_textview_radius"
+        app:boxCornerRadiusBottomStart="@dimen/rounded_textview_radius"
+        app:boxCornerRadiusTopEnd="@dimen/rounded_textview_radius"
+        app:boxCornerRadiusTopStart="@dimen/rounded_textview_radius">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Phone number" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/password_text_input_layout"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/phone_text_input_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        app:boxCornerRadiusBottomEnd="@dimen/rounded_textview_radius"
+        app:boxCornerRadiusBottomStart="@dimen/rounded_textview_radius"
+        app:boxCornerRadiusTopEnd="@dimen/rounded_textview_radius"
+        app:boxCornerRadiusTopStart="@dimen/rounded_textview_radius">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/re_password_text_input_layout"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/password_text_input_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        app:boxCornerRadiusBottomEnd="@dimen/rounded_textview_radius"
+        app:boxCornerRadiusBottomStart="@dimen/rounded_textview_radius"
+        app:boxCornerRadiusTopEnd="@dimen/rounded_textview_radius"
+        app:boxCornerRadiusTopStart="@dimen/rounded_textview_radius">
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Re-enter password" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/sign_in_button"
+        android:layout_width="129dp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="35dp"
+        android:background="@drawable/custom_sign_in_button"
+        android:text="@string/label_sign_up" />
+
+
+</RelativeLayout>
