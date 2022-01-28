@@ -9,7 +9,7 @@
 
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/card_view"
+        android:id="@+id/card_view_city_chooser"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -17,10 +17,11 @@
         android:layout_marginTop="2dp"
         app:cardBackgroundColor="@color/medum_blue"
         app:cardCornerRadius="15dp"
-        app:cardElevation="30dp">
+        app:cardElevation="30dp"
+        android:outlineAmbientShadowColor="@color/black">
 
         <RelativeLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="4dp">
 
@@ -30,6 +31,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
                 app:boxBackgroundColor="@color/bright_blue"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp"
                 app:boxCornerRadiusBottomEnd="@dimen/rounded_textview_radius"
                 app:boxCornerRadiusBottomStart="@dimen/rounded_textview_radius"
                 app:boxCornerRadiusTopEnd="@dimen/rounded_textview_radius"
@@ -39,19 +42,18 @@
                     android:id="@+id/enty_ciy_from"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="City 1"
-                    android:textColor="@color/white"
-                    android:textColorHint="@color/white" />
+                    android:hint="From where" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/city_to_text_input_layout"
                 android:layout_width="320dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                app:boxBackgroundColor="@color/bright_blue"
-
                 android:layout_below="@+id/city_from_text_input_layout"
+                android:layout_marginTop="8dp"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp"
+                app:boxBackgroundColor="@color/bright_blue"
                 app:boxCornerRadiusBottomEnd="@dimen/rounded_textview_radius"
                 app:boxCornerRadiusBottomStart="@dimen/rounded_textview_radius"
                 app:boxCornerRadiusTopEnd="@dimen/rounded_textview_radius"
@@ -62,12 +64,100 @@
                     android:id="@+id/enty_ciy_to"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="City 2"
-                    android:textColor="@color/white"
-                    android:textColorHint="@color/white" />
+                    android:hint="To where" />
             </com.google.android.material.textfield.TextInputLayout>
+
+            <ImageButton
+                android:id="@+id/imageButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="4dp"
+                android:layout_toEndOf="@+id/city_from_text_input_layout"
+                android:background="@drawable/custom_sign_in_button"
+                android:src="@drawable/ic_swap" />
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
 
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view_ticket_data"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_below="@+id/card_view_city_chooser"
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp"
+        android:outlineAmbientShadowColor="@color/black"
+        app:cardBackgroundColor="@color/bright_gray"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="30dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="4dp">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button_date_from"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/custom_sign_in_button"
+                android:text="Date to"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button_date_to"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/custom_sign_in_button"
+                android:text="Date from"/>
+
+            <View
+                android:id="@+id/home_line_1"
+                android:layout_below="@+id/button_date_to"
+                android:layout_width="match_parent"
+                android:layout_marginTop="8dp"
+                android:layout_height="1dp"
+                android:background="@color/medum_gray" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/button_date_to"
+                android:layout_marginTop="8dp"
+                android:layout_centerHorizontal="true"
+                android:textSize="19sp"
+                android:text="Price" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/enty_min_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/home_line_1"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="8dp"
+                android:textSize="19sp"
+                android:hint="Minimum price" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/enty_max_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/home_line_1"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="20dp"
+                android:textSize="19sp"
+                android:hint="Maximum price" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
 
 </RelativeLayout>
