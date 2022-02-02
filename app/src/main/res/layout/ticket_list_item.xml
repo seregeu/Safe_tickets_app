@@ -38,37 +38,25 @@
 
             <View
                 android:id="@+id/ticket_line_vetrical"
-                android:layout_width="180dp"
+                android:layout_width="197dp"
                 android:layout_height="match_parent"
                 android:layout_alignParentStart="true"
-                android:layout_marginStart="46dp"
+                android:layout_marginStart="16dp"
                 android:layout_marginEnd="0dp"
                 android:layout_marginBottom="0dp"
                 android:background="@drawable/dotted_line" />
 
-            <TextView
-                android:id="@+id/textview_city_from"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginStart="13dp"
-                android:layout_marginBottom="74dp"
-                android:text="City From" />
-
             <ImageView
                 android:id="@+id/imageview_train_ticket"
-                android:layout_width="32dp"
-                android:layout_height="38dp"
-                android:layout_alignBottom="@+id/textview_city_to"
-                android:layout_marginStart="30dp"
-                android:layout_marginEnd="31dp"
-                android:layout_marginBottom="-33dp"
-                android:layout_toStartOf="@+id/textview_city_to"
-                android:layout_toEndOf="@+id/textview_city_from"
+                android:layout_width="50dp"
+                android:layout_height="62dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="9dp"
+                android:layout_marginTop="9dp"
                 android:background="@drawable/ic_train_1_ticket"
-                android:maxHeight="10dp"
-                android:maxWidth="10dp" />
+                android:maxWidth="10dp"
+                android:maxHeight="10dp" />
 
             <TextView
                 android:id="@+id/textview_ticket_price"
@@ -81,24 +69,14 @@
                 android:text="Cost ₽" />
 
             <TextView
-                android:id="@+id/textview_time_from"
+                android:id="@+id/textview_train_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_below="@+id/imageview_train_ticket"
                 android:layout_alignParentStart="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginStart="26dp"
-                android:layout_marginBottom="30dp"
-                android:text="12:25" />
-
-            <TextView
-                android:id="@+id/textview_date_from"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginStart="8dp"
-                android:layout_marginBottom="52dp"
-                android:text="12.01.2022" />
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="-5dp"
+                android:text="016A" />
 
             <TextView
                 android:id="@+id/textview_date_to"
@@ -106,19 +84,39 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
-                android:layout_marginEnd="188dp"
-                android:layout_marginBottom="52dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginBottom="56dp"
                 android:text="13.01.2022" />
 
             <TextView
-                android:id="@+id/textview_city_to"
+                android:id="@+id/textview_city_from"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
+                android:layout_alignParentStart="true"
                 android:layout_alignParentBottom="true"
-                android:layout_marginEnd="205dp"
-                android:layout_marginBottom="73dp"
-                android:text="City to" />
+                android:layout_marginStart="150dp"
+                android:layout_marginBottom="78dp"
+                android:text="City From" />
+
+            <TextView
+                android:id="@+id/textview_date_from"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="145dp"
+                android:layout_marginBottom="56dp"
+                android:text="12.01.2022" />
+
+            <TextView
+                android:id="@+id/textview_time_from"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="163dp"
+                android:layout_marginBottom="34dp"
+                android:text="12:25" />
 
             <TextView
                 android:id="@+id/textview_time_to"
@@ -126,9 +124,20 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
-                android:layout_marginEnd="209dp"
-                android:layout_marginBottom="30dp"
+                android:layout_marginEnd="72dp"
+                android:layout_marginBottom="34dp"
                 android:text="12:26" />
+
+            <TextView
+                android:id="@+id/textview_city_to"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="68dp"
+                android:layout_marginBottom="77dp"
+                android:text="City to" />
+
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
 
