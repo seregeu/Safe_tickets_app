@@ -83,7 +83,7 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/card_view_ticket_data"
         android:layout_width="match_parent"
-        android:layout_height="250dp"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/card_view_city_chooser"
         android:layout_gravity="center"
         android:layout_marginTop="8dp"
@@ -106,7 +106,7 @@
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="8dp"
                 android:background="@drawable/custom_sign_in_button"
-                android:text="Date to"/>
+                android:text="Date to" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/button_date_to"
@@ -117,24 +117,24 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="20dp"
                 android:background="@drawable/custom_sign_in_button"
-                android:text="Date from"/>
+                android:text="Date from" />
 
             <View
                 android:id="@+id/home_line_1"
-                android:layout_below="@+id/button_date_to"
                 android:layout_width="match_parent"
-                android:layout_marginTop="8dp"
                 android:layout_height="1dp"
+                android:layout_below="@+id/button_date_to"
+                android:layout_marginTop="8dp"
                 android:background="@color/medum_gray" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/button_date_to"
-                android:layout_marginTop="8dp"
                 android:layout_centerHorizontal="true"
-                android:textSize="19sp"
-                android:text="Price" />
+                android:layout_marginTop="8dp"
+                android:text="Price"
+                android:textSize="19sp" />
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/enty_min_price"
@@ -144,8 +144,8 @@
                 android:layout_alignParentStart="true"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="8dp"
-                android:textSize="19sp"
-                android:hint="Minimum price" />
+                android:hint="Minimum price"
+                android:textSize="19sp" />
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/enty_max_price"
@@ -155,9 +155,36 @@
                 android:layout_alignParentEnd="true"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="20dp"
-                android:textSize="19sp"
-                android:hint="Maximum price" />
+                android:hint="Maximum price"
+                android:textSize="19sp" />
+
+            <Button
+                android:id="@+id/sign_up_button"
+                android:layout_width="128dp"
+                android:layout_height="48dp"
+                android:layout_below="@+id/enty_max_price"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/custom_sign_in_button"
+                android:text="Search" />
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view_tickets_result"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_below="@+id/card_view_ticket_data"
+        android:layout_gravity="center"
+        android:layout_marginTop="4dp"
+        android:outlineAmbientShadowColor="@color/black"
+        app:cardBackgroundColor="@color/bright_gray"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="30dp"></androidx.cardview.widget.CardView>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="" />
 
 </RelativeLayout>
